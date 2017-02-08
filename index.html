@@ -23,6 +23,20 @@
 	<div id="page">
 
 	</div>
-
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#search").submit(function() {
+				var input = $('input[name=post]').val();
+				var date = new Date();
+				var seconds = date.getSeconds();
+				$('#page').append('<p>' + input + " - " + seconds + '</p>');
+				return false;
+			});
+		});
+	</script>
 </body>
 </html>
